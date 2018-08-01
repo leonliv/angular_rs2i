@@ -15,7 +15,8 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { HomeModule } from './home/home.module';
 import { ItemsModule } from './items/items.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LivresComponent } from './containers/livres/livres/livres.component';
+import { AppRoutingModule } from './app-routing.module';
+import { Router } from '@angular/router';
 
 
 @NgModule({
@@ -25,14 +26,20 @@ import { LivresComponent } from './containers/livres/livres/livres.component';
   imports: [
     BrowserModule,
     CoreModule,
-    LoginModule,
-    PageNotFoundModule,
     SharedModule,
+    LoginModule,
     HomeModule,
     ItemsModule,
-    NgbModule.forRoot()
+    AppRoutingModule,
+    PageNotFoundModule,
+    NgbModule.forRoot(),
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'fr' } ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+ }

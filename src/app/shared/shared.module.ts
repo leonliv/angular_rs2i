@@ -9,12 +9,14 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { FilterByStatePipe } from './pipes/filter-by-state.pipe';
 import { StateDirective } from './directives/state.directive';
 import { RemoveAccentPipe } from './pipes/remove-accent.pipe';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe],
   exports: [NavComponent, ItemComponent, FilterByStatePipe]
