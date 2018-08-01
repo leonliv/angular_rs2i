@@ -13,7 +13,6 @@ import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { HomeModule } from './home/home.module';
-import { ItemsModule } from './items/items.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { Router } from '@angular/router';
@@ -29,7 +28,6 @@ import { Router } from '@angular/router';
     SharedModule,
     LoginModule,
     HomeModule,
-    ItemsModule,
     AppRoutingModule,
     PageNotFoundModule,
     NgbModule.forRoot(),
