@@ -6,6 +6,7 @@ import { Item } from '../../shared/interfaces/item';
   providedIn: 'root'
 })
 export class CollectionService {
+
   private _collection: Item[];
   constructor() {
     this.collection = COLLECTION;
@@ -34,6 +35,9 @@ export class CollectionService {
   /**
    * add item in collection
    */
+  public add(item: Item): void {
+    this.collection.push(item);
+  }
 
   /**
    * update item in collection

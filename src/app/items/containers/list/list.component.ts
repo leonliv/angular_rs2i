@@ -22,4 +22,9 @@ export class ListComponent extends AbstractComponent implements OnInit {
     console.log('surcharge');
   }
 
+  public add(item: Item): void {
+    console.log(item);
+    this.collectionService.add(item);
+  }
+
 }

@@ -10,15 +10,18 @@ import { FilterByStatePipe } from './pipes/filter-by-state.pipe';
 import { StateDirective } from './directives/state.directive';
 import { RemoveAccentPipe } from './pipes/remove-accent.pipe';
 import { RouterModule } from '@angular/router';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
-  declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe],
-  exports: [NavComponent, ItemComponent, FilterByStatePipe]
+  declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe, FormComponent],
+  exports: [NavComponent, ItemComponent, FilterByStatePipe, FormComponent]
 })
 export class SharedModule { }

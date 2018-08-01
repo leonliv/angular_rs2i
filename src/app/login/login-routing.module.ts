@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '../../../node_modules/@angular/router';
-import { HomeComponent } from '../home/containers/home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './containers/login/login.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
 
 ];
 
