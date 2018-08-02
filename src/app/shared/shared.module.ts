@@ -11,11 +11,12 @@ import { StateDirective } from './directives/state.directive';
 import { RemoveAccentPipe } from './pipes/remove-accent.pipe';
 import { RouterModule } from '@angular/router';
 import { FormComponent } from './components/form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // external librairies
 import { IconsModule } from '../icons/icons.module';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 
 
 @NgModule({
@@ -24,9 +25,11 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
     NgbModule,
     RouterModule,
     FormsModule,
-    IconsModule
+    IconsModule,
+    ReactiveFormsModule
   ],
-  declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe, FormComponent],
-  exports: [NavComponent, ItemComponent, FilterByStatePipe, FormComponent]
+  declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe,
+    FormComponent, FormReactiveComponent],
+  exports: [NavComponent, ItemComponent, FilterByStatePipe, FormComponent, FormReactiveComponent]
 })
 export class SharedModule { }
