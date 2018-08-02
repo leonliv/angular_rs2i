@@ -14,7 +14,7 @@ import { AddComponent } from './containers/add/add.component';
   imports: [
     CommonModule,
     SharedModule,
-    ItemsRoutingModule
+    ItemsRoutingModule,
   ],
   declarations: [ListComponent, LivresComponent, AbstractComponent, AddComponent],
   exports: [ListComponent, LivresComponent]

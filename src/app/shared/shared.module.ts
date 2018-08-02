@@ -13,13 +13,18 @@ import { RouterModule } from '@angular/router';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 
+// external librairies
+import { IconsModule } from '../icons/icons.module';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    IconsModule
   ],
   declarations: [NavComponent, ItemComponent, CapitalizePipe, FilterByStatePipe, StateDirective, RemoveAccentPipe, FormComponent],
   exports: [NavComponent, ItemComponent, FilterByStatePipe, FormComponent]
